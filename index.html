@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=PT+Serif&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=PT+Serif:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:image" content="https://climatecto.com/desk.png" />
@@ -13,6 +13,7 @@
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173069847-2"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -39,8 +40,9 @@ font-weight: 900;
 } 
 
 p{
+  font-weight: 300;
   font-size: 12px;
-  line-height: 160%;
+  line-height: 180%;
 }
 
 .btn{
@@ -48,7 +50,7 @@ p{
   font-weight: bold;
 
   display: inline-block;
-  background-color: #EEB274;
+  background-color: #212A37;
   padding: 16px;
   box-sizing: border-box;
   margin-top: 16px;
@@ -59,8 +61,7 @@ p{
 }
 
 .btn:hover{
-  padding: 14px;
-  border: 2px dashed white;
+  opacity: 0.9;
 }
 
 .quote, .quote *{
@@ -118,6 +119,29 @@ section{
   text-decoration: none;
 }
 
+.faint-label{
+  text-transform: uppercase;
+  font-size: 10px;
+  opacity: 0.5;
+  margin: 16px 0;
+}
+
+strong{
+  display: block;
+  font-size: 90%;
+  margin-top: 24px;
+  margin-bottom:0px;
+  letter-spacing: 0.03em;
+}
+
+.header-section{
+  background-color: #010A1B; 
+  display:grid; 
+  grid-template-columns: 150px 1fr 240px; 
+  padding: 12px 4%; 
+  font-weight: bold;
+}
+
 @media (max-width: 699px){
   .text-section, .about-us-section, .cto-section, .company-section{
      grid-template-columns: 1fr;
@@ -134,6 +158,10 @@ section{
   .quote{
     display: none;
   }
+
+  .block-h1{
+    display: none;
+  }
 }
 
 @media (min-width: 700px){
@@ -141,18 +169,71 @@ section{
   .text-section:not(.about-us-section){
     column-gap: 20%;
   }
+
+  .header-section{
+     grid-template-columns: 150px 1fr 300px; 
+ 
+  }
+
+/*  .cto-section h1, .company-section h1{
+    font-size: 40px;
+  }*/
+
 }
 
+.nav-links{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+.nav-links a{
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-links a:hover{
+  text-decoration: underline;
+}
+
+.sticky{
+  width: 100%; /* needed this to prevent .fixed from moving screen */
+  box-sizing: border-box; /* needed this or else width was bigger */
+}
+.fixed{
+  position: fixed;
+  top:0; 
+  left:0;
+  width: 100%; 
+}
 </style>
 
 </head>
 
 <body>
 
+<section class="header-section sticky fixed">
+  
+  <h1>
+    Climate CTO
+  </h1>
+
+  <div></div>
+
+  <div class="nav-links">
+    <a href="#be-a-cto">Be a CTO</a>
+    <a href="#hire-a-cto">Hire a CTO</a>
+    <a href="#faq">FAQ</a>
+  </div>
+
+</section>
+
 <section class="cto-section">
 
   <h1 class="block-h1">
-    <div>Climate CTO</div>
+    <div>Leave your desk job</div>
   </h1>
 
   <img src="desk.png">
@@ -161,7 +242,7 @@ section{
 
 <!-- todo: shrink the images -->
 
-<section class="text-section" style="background-color: #010A1B">
+<section id="be-a-cto" class="text-section" style="background-color: #010A1B">
 
 <h1>Be a CTO</h1>
 <div></div>
@@ -192,7 +273,7 @@ Perhaps you should consider becoming a Climate CTO.
   <img src="landscape.png">
 
   <h1 class="block-h1">
-    <div>Impactful companies</div>
+    <div>Maximize your impact</div>
   </h1>
 
 </section>
@@ -200,7 +281,7 @@ Perhaps you should consider becoming a Climate CTO.
 
 
 
-<section class="text-section" style="background-color: #133263">
+<section id="hire-a-cto" class="text-section" style="background-color: #010A1B">
 <h1>Hire a CTO</h1>
 
 <div></div>
@@ -214,7 +295,7 @@ When we left our jobs as Google engineers in July 2020, half a dozen climate sta
 </p>
 
 <p>
-We want to bridge this gap by finding you a climate CTO. All candidates are directly from our networks, or have been vetted and screened by us to the highest of Google standards.
+We want to bridge this gap by finding you a climate CTO. All candidates are directly from our networks, or have been vetted and screened by us.
 </p>
 
 <a class="btn" href="https://forms.gle/ZJZigKPPoq7ntkzu9">I'm hiring a climate CTO</a>
@@ -228,28 +309,76 @@ We want to bridge this gap by finding you a climate CTO. All candidates are dire
 </section>
 
 
-<section class="text-section" style="background-color: #212A37">
+<section class="text-section" style="background-color: #0D0D34">
 
-<h1>Short term technical consultancy</h1>
+<h1>Part time consultancy</h1>
 <div></div>
 
 <div>
+
 <p>
-Already have a CTO, but want a technical consultant to make sure you are on the right track? 
+Not ready to be a CTO, but looking to try part time work in climate and seeing if it is right for you? 
 </p>
 
 <p>
-In collaboration with <a href="https://workonclimate.org">Work on Climate</a>, we provide short term consulting with top notch programmers, designers, and machine learning practitioners in Silicon Valley. 
+Head over to our sister website <a href="https://cliamtecabal.com">Climate Cabal</a> where we matchmake top notch programmers, designers, machine learning practitioners, and scientists in Silicon Valley with climate organizations. 
 </p>
 
-<a class="btn" href="https://forms.gle/ZJZigKPPoq7ntkzu9">I need a consultant</a>
-<a class="btn" href="https://forms.gle/TW93cS48tvi1wnvm9">Apply to be a consultant</a>
+<strong>Short term contracts ensure fit</strong>
+<p>
+ Short term contracts allow candidates to see what it is like to work in climate, and allow both parties to ensure mutual fit before extending a full time offer. 
+</p>
+
+<strong>High signal matchmaking</strong>
+<p>
+ Companies are restricted in the number of candidates they can contact, so there is no spam.  Candidates are all folks that we would hire ourselves. 
+</p>
+
 </div>
 
 <p class="quote">
-insert testimonial
-                  — early  climate founder
+"I am looking for something lower commitment."
+                <br>  — someone on an app
 </p>
+</section>
+
+
+<section id="faq" class="text-section" style="background-color: #212A37">
+
+<h1>FAQ</h1>
+<div></div>
+
+<div>
+<div class="faint-label">For individuals</div>
+<strong>What do I get by signing up?</strong>
+<p>Fill in our <a href="https://forms.gle/TW93cS48tvi1wnvm9">talent intake form</a>, describing your skills and desires, and we will email you if we see a good fit. You can also opt-in to cofounder mixers and events that we host. 
+</p>
+
+<strong>Is this free?</strong>
+<p>
+We are free for potential CTOs. We want to help you find a meaningful job in climate and believe that this is one of the best ways to scale our impact. Companies pay us a voluntary placement fee if you end up joining them fulltime.
+</p>
+
+
+<strong>What can I do while I wait to be matched?</strong>
+<p>Get started taking action today by finding people and resources with our sister organization <a href="https://workonclimate.org">Work on Climate</a>.
+</p>
+</div> <!-- end lhs -->
+
+
+<div>
+<div class="faint-label">For organizations</div>
+
+<strong>What do I get by signing up?</strong>
+<p>Fill in our <a href="https://forms.gle/ZJZigKPPoq7ntkzu9">organization intake form</a> describing your project and team. If we see a skills match, we will send you candidate profiles. We help you source talent and interview candidates, because we want to empower climate organizations with the best candidates. 
+</p>
+
+<strong>Is this free?</strong>
+<p>
+We offer this service to organizations under a “pay as you can model” in order to balance our desire to assist as many climate companies as possible with the desire to run a sustainable operation.
+</p>
+</div> <!-- end rhs -->
+
 </section>
 
 
@@ -268,3 +397,21 @@ We are two ex-Google AI software engineers with 8 and 5 years  at the company. W
 
 </body>
 
+
+<script>
+
+// todo: add favicon
+
+
+$(window).scroll(function(){
+  var sticky = $('.sticky'),
+  scroll = $(window).scrollTop();
+
+  if (scroll >= 20){
+    sticky.addClass('fixed');
+  }
+  else if (scroll <= 10) {
+    sticky.removeClass('fixed');
+  }
+});  
+</script>
