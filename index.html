@@ -14,6 +14,9 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173069847-2"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="jquery.sticky.js"></script>
+
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -30,6 +33,7 @@
 }
 
 body{
+  background-color: #010A1B; 
   margin: 0px;
 }
 
@@ -201,20 +205,21 @@ strong{
 .sticky{
   width: 100%; /* needed this to prevent .fixed from moving screen */
   box-sizing: border-box; /* needed this or else width was bigger */
+  opacity: 0.98;
 }
-.fixed{
-  position: fixed;
-  top:0; 
-  left:0;
-  width: 100%; 
+
+html {
+  scroll-padding-top: 80px; /* height of your sticky header */
+  scroll-snap-margin-top: 80px;
 }
+
 </style>
 
 </head>
 
 <body>
 
-<section class="header-section sticky fixed">
+<section class="header-section sticky">
   
   <h1>
     Climate CTO
@@ -242,7 +247,7 @@ strong{
 
 <!-- todo: shrink the images -->
 
-<section id="be-a-cto" class="text-section" style="background-color: #010A1B">
+<section id="be-a-cto" class="jump-target text-section" style="background-color: #010A1B">
 
 <h1>Be a CTO</h1>
 <div></div>
@@ -281,7 +286,7 @@ Perhaps you should consider becoming a Climate CTO.
 
 
 
-<section id="hire-a-cto" class="text-section" style="background-color: #010A1B">
+<section id="hire-a-cto" class="jump-target text-section" style="background-color: #010A1B">
 <h1>Hire a CTO</h1>
 
 <div></div>
@@ -343,7 +348,7 @@ Head over to our sister website <a href="https://cliamtecabal.com">Climate Cabal
 </section>
 
 
-<section id="faq" class="text-section" style="background-color: #212A37">
+<section id="faq" class="jump-target text-section" style="background-color: #212A37">
 
 <h1>FAQ</h1>
 <div></div>
@@ -401,17 +406,12 @@ We are two ex-Google AI software engineers with 8 and 5 years  at the company. W
 <script>
 
 // todo: add favicon
+// todo: fix the problem where anchor links are obstructed by header....
+// probably need to do this in JS.... 
+// remove .jump-target class if we don't use it
 
 
-$(window).scroll(function(){
-  var sticky = $('.sticky'),
-  scroll = $(window).scrollTop();
-
-  if (scroll >= 20){
-    sticky.addClass('fixed');
-  }
-  else if (scroll <= 10) {
-    sticky.removeClass('fixed');
-  }
-});  
+  $(document).ready(function(){
+    $(".sticky").sticky({topSpacing:0});
+  });
 </script>
