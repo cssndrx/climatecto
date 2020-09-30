@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=PT+Serif:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/akg1sqm.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +15,8 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173069847-2"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- https://github.com/garand/sticky -->
 <script src="jquery.sticky.js"></script>
 
 
@@ -28,13 +30,10 @@
 
 
 <style>
-  *{
-  font-family: 'Merriweather', serif;
+*{
   color: white;
-
-font-family: acumin-pro, serif;
-font-weight: 700;
-font-style: normal;
+/*  font-family: 'Merriweather', serif;*/
+  font-family: acumin-pro, sans-serif;
 
 }
 
@@ -50,8 +49,7 @@ font-weight: 900;
 } 
 
 p{
-  font-weight: 300;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 180%;
 }
 
@@ -132,7 +130,7 @@ section{
 .faint-label{
   text-transform: uppercase;
   font-size: 10px;
-  opacity: 0.5;
+  color: #d3d4d7;
   margin: 16px 0;
 }
 
@@ -211,7 +209,6 @@ strong{
 .sticky{
   width: 100%; /* needed this to prevent .fixed from moving screen */
   box-sizing: border-box; /* needed this or else width was bigger */
-  opacity: 0.98;
 }
 
 /*html {
@@ -234,9 +231,9 @@ strong{
   <div></div>
 
   <div class="nav-links">
-    <a href="#be-a-cto">Be a CTO</a>
-    <a href="#hire-a-cto">Hire a CTO</a>
-    <a href="#faq">FAQ</a>
+    <a class="nav-link" href="#be-a-cto">Be a CTO</a>
+    <a class="nav-link" href="#hire-a-cto">Hire a CTO</a>
+    <a class="nav-link" href="#faq">FAQ</a>
   </div>
 
 </section>
@@ -253,7 +250,7 @@ strong{
 
 <!-- todo: shrink the images -->
 
-<section id="be-a-cto" class="jump-target text-section" style="background-color: #010A1B">
+<section id="be-a-cto" class="text-section" style="background-color: #010A1B">
 
 <h1>Be a CTO</h1>
 <div></div>
@@ -292,7 +289,7 @@ Perhaps you should consider becoming a Climate CTO.
 
 
 
-<section id="hire-a-cto" class="jump-target text-section" style="background-color: #010A1B">
+<section id="hire-a-cto" class="text-section" style="background-color: #010A1B">
 <h1>Hire a CTO</h1>
 
 <div></div>
@@ -332,17 +329,7 @@ Not ready to be a CTO, but looking to try part time work in climate and seeing i
 </p>
 
 <p>
-Head over to our sister website <a href="https://cliamtecabal.com">Climate Cabal</a> where we matchmake top notch programmers, designers, machine learning practitioners, and scientists in Silicon Valley with climate organizations. 
-</p>
-
-<strong>Short term contracts ensure fit</strong>
-<p>
- Short term contracts allow candidates to see what it is like to work in climate, and allow both parties to ensure mutual fit before extending a full time offer. 
-</p>
-
-<strong>High signal matchmaking</strong>
-<p>
- Companies are restricted in the number of candidates they can contact, so there is no spam.  Candidates are all folks that we would hire ourselves. 
+Head over to <a href="https://climatecabal.com">Climate Cabal</a> where we matchmake top notch programmers, designers, machine learning practitioners, and scientists in Silicon Valley with climate organizations looking for part timers. 
 </p>
 
 </div>
@@ -354,7 +341,7 @@ Head over to our sister website <a href="https://cliamtecabal.com">Climate Cabal
 </section>
 
 
-<section id="faq" class="jump-target text-section" style="background-color: #212A37">
+<section id="faq" class="text-section" style="background-color: #212A37">
 
 <h1>FAQ</h1>
 <div></div>
@@ -367,12 +354,12 @@ Head over to our sister website <a href="https://cliamtecabal.com">Climate Cabal
 
 <strong>Is this free?</strong>
 <p>
-We are free for potential CTOs. We want to help you find a meaningful job in climate and believe that this is one of the best ways to scale our impact. Companies pay us a voluntary placement fee if you end up joining them fulltime.
+Yes. We want to help you find a meaningful job in climate and believe that this is one of the best ways to scale our impact. 
 </p>
 
 
 <strong>What can I do while I wait to be matched?</strong>
-<p>Get started taking action today by finding people and resources with our sister organization <a href="https://workonclimate.org">Work on Climate</a>.
+<p>Get started taking action today by finding people and resources with others in the <a href="https://workonclimate.org">Work on Climate</a> community.
 </p>
 </div> <!-- end lhs -->
 
@@ -381,12 +368,12 @@ We are free for potential CTOs. We want to help you find a meaningful job in cli
 <div class="faint-label">For organizations</div>
 
 <strong>What do I get by signing up?</strong>
-<p>Fill in our <a href="https://forms.gle/ZJZigKPPoq7ntkzu9">organization intake form</a> describing your project and team. If we see a skills match, we will send you candidate profiles. We help you source talent and interview candidates, because we want to empower climate organizations with the best candidates. 
+<p>Fill in our <a href="https://forms.gle/ZJZigKPPoq7ntkzu9">organization intake form</a> describing your project and team. If we see a skills match, we will send you candidate profiles. 
 </p>
 
 <strong>Is this free?</strong>
 <p>
-We offer this service to organizations under a “pay as you can model” in order to balance our desire to assist as many climate companies as possible with the desire to run a sustainable operation.
+Yes. You are doing critical work for our world, and we want to empower you with great talent. We hope you do great things and pay it forward.
 </p>
 </div> <!-- end rhs -->
 
@@ -411,13 +398,16 @@ We are two ex-Google AI software engineers with 8 and 5 years  at the company. W
 
 <script>
 
-// todo: add favicon
-// todo: fix the problem where anchor links are obstructed by header....
-// probably need to do this in JS.... 
-// remove .jump-target class if we don't use it
-
-
   $(document).ready(function(){
     $(".sticky").sticky({topSpacing:0});
   });
+
+  $('.nav-link').each(function(){
+    const hash = this.hash; // #be-a-cto'
+    $(this).click(function(e){
+      $('html, body').animate({scrollTop: $(hash).offset().top -80 }, 'slow');
+      e.preventDefault(); // doesn't seem necessary
+    });
+  });
+
 </script>
