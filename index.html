@@ -2,12 +2,27 @@
 
 <head>
 <meta charset="utf-8">
-
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/akg1sqm.css">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" type="image/x-icon" href="https://climatecto.com/favicon.ico">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Climate CTO">
+<meta name="twitter:description" content="Matchmaking for climate startups and CTOs.">
+<meta name="twitter:creator" content="@CassandraXia">
+<meta name="twitter:image" content="https://climatecto.com/desk.png">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Climate CTO">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://climatecto.com">
 <meta property="og:image" content="https://climatecto.com/desk.png" />
+<meta property="og:description" content="Matchmaking between climate startups and CTOs.">
+
+
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Playfair+Display:wght@900&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
 
 <title>Climate CTO</title>
 
@@ -32,8 +47,7 @@
 <style>
 *{
   color: white;
-/*  font-family: 'Merriweather', serif;*/
-  font-family: acumin-pro, sans-serif;
+  font-family: 'Rubik', sans-serif;
 
 }
 
@@ -56,16 +70,15 @@ h1, h1 *, h2, h2 *{
 }
 
 p{
-  font-size: 16px;
   line-height: 180%;
+  color: #ececec;
 }
 
 .btn{
-  font-size: 16px;
   font-weight: bold;
 
   display: inline-block;
-  background-color: #212A37;
+  background-color: #D6A16B;
   padding: 16px 24px;
   box-sizing: border-box;
   margin-top: 16px;
@@ -76,12 +89,12 @@ p{
 }
 
 .btn:hover{
-  opacity: 0.9;
+  background-color: #EEB274;
 }
 
 .quote, .quote *{
   font-family: 'PT Serif', serif;
-  font-size: 20px;
+  font-size: 1.5em;
 }
 
 
@@ -108,7 +121,7 @@ section{
 }
 
 .about-us-section{
-  grid-template-columns: 200px 1fr; 
+  grid-template-columns: 150px minmax(280px, 1fr) 1fr; 
   column-gap: 64px;
 }
 
@@ -132,14 +145,14 @@ section{
 
 .faint-label{
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 0.8em;
   color: #d3d4d7;
   margin: 16px 0;
 }
 
 strong{
   display: block;
-  font-size: 90%;
+  font-size: 1em;
   margin-top: 24px;
   margin-bottom:0px;
   letter-spacing: 0.03em;
@@ -151,70 +164,6 @@ strong{
   grid-template-columns: 150px 1fr 240px; 
   padding: 12px 4%; 
   font-weight: bold;
-}
-
-@media (max-width: 699px){
-  .text-section, .about-us-section, .cto-section, .company-section{
-     grid-template-columns: 1fr;
-  }
-
-  .cto-section h2, .company-section h2{
-    min-height: 100px;
-  }
-
-  .about-us-section h2{
-    margin-bottom: 0px
-  }
-
-  .quote{
-    display: none;
-  }
-
-  .block-h2{
-    display: none;
-  }
-}
-
-@media (min-width: 700px){
-
-  .text-section:not(.about-us-section){
-    column-gap: 20%;
-  }
-
-  .header-section{
-     grid-template-columns: 150px 1fr 300px; 
- 
-  }
-
-  .about-us-section{
-      padding-right: 20%;
-  }
-
-  .block-h2{
-    font-size: 2em;
-  }
-
-
-/*  .cto-section h2, .company-section h2{
-    font-size: 40px;
-  }*/
-
-}
-
-@media (min-width: 1000px){
-  .about-us-section{
-    grid-template-columns: 200px 1fr; 
-    column-gap: 128px;
-  }
-
-  .block-h2{
-    font-size: 3em;
-  }
-
-  .block-h2 div{
-    margin: 32px;
-  }
-
 }
 
 .nav-links{
@@ -240,10 +189,79 @@ strong{
   object-fit: cover;
  }
 
-/*html {
-  scroll-padding-top: 80px; 
-  scroll-snap-margin-top: 80px;
-}*/
+
+@media (max-width: 699px){
+  .text-section, .about-us-section, .cto-section, .company-section{
+     grid-template-columns: 1fr;
+  }
+
+  .header-section{
+    grid-template-columns: 150px 1fr; 
+  }
+
+  .nav-links{
+    display: none;
+  }
+
+  .cto-section h2, .company-section h2{
+    min-height: 100px;
+  }
+
+  .about-us-section h2{
+    margin-bottom: 0px
+  }
+
+  .quote{
+    display: none;
+  }
+
+  .block-h2{
+    display: none;
+  }
+
+  .mobile-top-pad{
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 700px){
+
+  .text-section:not(.about-us-section){
+    column-gap: 20%;
+  }
+
+  .header-section{
+     grid-template-columns: 150px 1fr 300px; 
+ 
+  }
+
+  .about-us-section{
+      padding-right: 20%;
+  }
+
+  .block-h2{
+    font-size: 2em;
+  }
+
+}
+
+@media (min-width: 1000px){
+  .about-us-section{
+    grid-template-columns: 200px 1fr; 
+    column-gap: 128px;
+  }
+
+  .block-h2{
+    font-size: 3em;
+  }
+
+  .block-h2 div{
+    margin: 32px;
+  }
+
+}
+
+
 
 </style>
 
@@ -257,7 +275,8 @@ strong{
     Climate CTO
   </h1>
 
-  <a href="https://workonclimate.org" class="secret-link" style="align-self: center; font-weight:300; margin-left: 8px">by Work on Climate</a>
+  <a href="https://workonclimate.org" class="secret-link" style="align-self: center; font-weight:300; margin-left: 8px; position:relative; top:2px">by Work on Climate</a>
+
 
   <div class="nav-links">
     <a class="secret-link" href="https://forms.gle/TW93cS48tvi1wnvm9">Be a CTO</a>
@@ -361,27 +380,30 @@ We want to bridge this gap by finding you a climate CTO. All candidates are eith
 <div>
 <div class="faint-label">For individuals</div>
 <strong>What do I get by signing up?</strong>
-<p>You get matched with opportunities to become a CTO at an exciting new startup, vetted by the Work on Climate team.  You can also opt in to invitations to founder events we host.  To be considered, please fill out <a href="https://forms.gle/TW93cS48tvi1wnvm9">our form</a> here.
+<p>You get matched with opportunities to become a CTO at exciting new startups, vetted by the Work on Climate team.  You can also opt in to invitations to founder events we host.  To be considered, please fill out <a href="https://forms.gle/TW93cS48tvi1wnvm9">our form</a> here.
 </p>
 
 <strong>What can I do while I wait to be matched?</strong>
 <p>Get started taking action today by finding people and resources with others in the <a href="https://workonclimate.org">Work on Climate</a> community.
 </p>
+
+<a class="btn" href="https://forms.gle/TW93cS48tvi1wnvm9">I want to be a climate CTO</a>
 </div> <!-- end lhs -->
 
 
 <div>
-<div class="faint-label">For organizations</div>
+<div class="faint-label mobile-top-pad">For organizations</div>
 
 <strong>What do I get by signing up?</strong>
 
-<p>Signing up gets you access to an incredible vetted talent pool of highly technical CTO candidates. To be considered, please fill out <a href="https://forms.gle/ZJZigKPPoq7ntkzu9">our form</a> here.
+<p>You potentially get access to an incredible vetted talent pool of CTO candidates. To be considered, please fill out <a href="https://forms.gle/ZJZigKPPoq7ntkzu9">our form</a> here.
 </p>
 
 <strong>Is this free?</strong>
 <p>
 Yes. You are doing critical work for our world, and we want to empower you with great talent. We hope you do great things and pay it forward.
 </p>
+<a class="btn" href="https://forms.gle/ZJZigKPPoq7ntkzu9">I'm hiring a climate CTO</a>
 </div> <!-- end rhs -->
 
 </section>
@@ -412,8 +434,10 @@ About Us
 
 
 <p>
-We are two ex-Google AI software engineers with 5 and 8 years at the company. We left in July 2020 to start meaningful ventures to address climate change. Come join us at <a href="https://workonclimate.org">Work on Climate</a>. <br><br>—<a href="https://cassandraxia.com">Cassandra Xia</a> and <a href="https://www.linkedin.com/in/eugenekirpichov/">Eugene Kirpichov</a>
+We are two ex-Google AI software engineers with 5 and 8 years at the company. We left in July 2020 to start meaningful ventures to address climate change. Come join our community at <a href="https://workonclimate.org">Work on Climate</a>. <br><br>—<a href="https://cassandraxia.com">Cassandra Xia</a> and <a href="https://www.linkedin.com/in/eugenekirpichov/">Eugene Kirpichov</a>
 </p>
+
+<div></div>
 </section>
 
 
