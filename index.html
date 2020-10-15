@@ -42,11 +42,18 @@ body{
   margin: 0px;
 }
 
-h1, h1 *{
-
-font-family: 'Playfair Display', serif;
-font-weight: 900;
+h1, h1 *, h2, h2 *{
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
 } 
+
+.secret-link{
+  text-decoration: none;
+}
+
+.secret-link:hover{
+  text-decoration: underline;
+}
 
 p{
   font-size: 16px;
@@ -83,14 +90,11 @@ img{
   max-width: 100%;
 }
 
-.block-h1{
+.block-h2{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.block-h1 div{
-  text-align: center;
+  padding: 24px;
 }
 
 section{
@@ -154,11 +158,11 @@ strong{
      grid-template-columns: 1fr;
   }
 
-  .cto-section h1, .company-section h1{
+  .cto-section h2, .company-section h2{
     min-height: 100px;
   }
 
-  .about-us-section h1{
+  .about-us-section h2{
     margin-bottom: 0px
   }
 
@@ -166,7 +170,7 @@ strong{
     display: none;
   }
 
-  .block-h1{
+  .block-h2{
     display: none;
   }
 }
@@ -186,8 +190,12 @@ strong{
       padding-right: 20%;
   }
 
+  .block-h2{
+    font-size: 2em;
+  }
 
-/*  .cto-section h1, .company-section h1{
+
+/*  .cto-section h2, .company-section h2{
     font-size: 40px;
   }*/
 
@@ -197,6 +205,14 @@ strong{
   .about-us-section{
     grid-template-columns: 200px 1fr; 
     column-gap: 128px;
+  }
+
+  .block-h2{
+    font-size: 3em;
+  }
+
+  .block-h2 div{
+    margin: 32px;
   }
 
 }
@@ -211,11 +227,6 @@ strong{
   font-weight: bold;
   font-size: 14px;
   text-align: center;
-  text-decoration: none;
-}
-
-.nav-links a:hover{
-  text-decoration: underline;
 }
 
 .sticky{
@@ -223,6 +234,11 @@ strong{
   box-sizing: border-box; /* needed this or else width was bigger */
   border-bottom: 0.25px solid #636C7C;
 }
+
+.image-h2{
+  min-height: 100%;
+  object-fit: cover;
+ }
 
 /*html {
   scroll-padding-top: 80px; 
@@ -241,23 +257,25 @@ strong{
     Climate CTO
   </h1>
 
-  <div></div>
+  <a href="https://workonclimate.org" class="secret-link" style="align-self: center; font-weight:300; margin-left: 8px">by Work on Climate</a>
 
   <div class="nav-links">
-    <a class="nav-link" href="#be-a-cto">Be a CTO</a>
-    <a class="nav-link" href="#hire-a-cto">Hire a CTO</a>
-    <a class="nav-link" href="#faq">FAQ</a>
+    <a class="secret-link" href="https://forms.gle/TW93cS48tvi1wnvm9">Be a CTO</a>
+    <a class="secret-link" href="https://forms.gle/ZJZigKPPoq7ntkzu9">Hire a CTO</a>
+    <a class="nav-link secret-link" href="#faq">FAQ</a>
   </div>
 
 </section>
 
 <section class="cto-section">
 
-  <h1 class="block-h1">
-    <div>Leave your desk job</div>
-  </h1>
+  <h2 class="block-h2">
+    <a class="secret-link" href="https://forms.gle/TW93cS48tvi1wnvm9">
+      <div>Leave your<br>desk job</div>
+    </a>
+  </h2>
 
-  <img src="desk.png">
+  <img src="desk.png" class="image-h2">
 
 </section>
 
@@ -265,16 +283,17 @@ strong{
 
 <section id="be-a-cto" class="text-section" style="background-color: #010A1B">
 
-<h1>Be a CTO</h1>
+<h2>Be a CTO</h2>
 <div></div>
 
 <div>
+
 <p>
-Do you wonder if you’re working on meaningful problems?  Have you spent years honing your technical skills, in anticipation for your greatest challenge?  Do you realize that we only have 10-20 years to reach net zero carbon emissions as a society?
+Do you wonder if you’re working on meaningful problems? Ready to use your technical skills to save the planet?  We are running out of time to reach net zero carbon emissions and you can help!
 </p>
 
 <p>
-Many early stage climate startups have a domain expert founder but need a traditional technical founder, aka a Chief Technical Officer. Perhaps that could be you? 
+We have identified a number of early stage climate startups that have strong domain expertise, but would greatly benefit from a traditional technical founder - a Chief Technical Officer.  Climate change represents a multi-trillion dollar market opportunity ripe for disruption.  Change your career, save our climate.
 </p>
 
 <a class="btn" href="https://forms.gle/TW93cS48tvi1wnvm9">I want to be a climate CTO</a>
@@ -291,11 +310,13 @@ Many early stage climate startups have a domain expert founder but need a tradit
 
 <section class="company-section">
 
-  <img src="landscape.png">
+  <img src="landscape.png" class="image-h2">
 
-  <h1 class="block-h1">
-    <div>Maximize your impact</div>
-  </h1>
+  <h2 class="block-h2">
+    <a class="secret-link" href="https://forms.gle/TW93cS48tvi1wnvm9">
+      <div>maximize your<br>impact.</div>
+    </a>
+  </h2>
 
 </section>
 
@@ -303,7 +324,7 @@ Many early stage climate startups have a domain expert founder but need a tradit
 
 
 <section id="hire-a-cto" class="text-section" style="background-color: #010A1B">
-<h1>Hire a CTO</h1>
+<h2>Hire a CTO</h2>
 
 <div></div>
 
@@ -312,7 +333,7 @@ Many early stage climate startups have a domain expert founder but need a tradit
 Are you starting a climate startup? We want to empower all climate startups to succeed by giving them access to the highest quality technical talent. 
 </p>
 <p>
-When we left our jobs as Google engineers in July 2020, half a dozen climate startups reached out and asked us to be their CTO. We realized that the lack of network overlap between those with deep domain expertise in climate and those with deep experience in software engineering is preventing some climate startups from taking off. 
+When we left our jobs as Google engineers in July 2020, half a dozen climate startups reached out and asked us to be their CTO. We realized that climate startups need people with deep experience in software engineering, but climate experts don't know a lot of these folks. And in fact, not having a climate CTO is preventing some climate start-ups from taking off.
 </p>
 
 <p>
@@ -334,20 +355,14 @@ We want to bridge this gap by finding you a climate CTO. All candidates are eith
 
 <section id="faq" class="text-section" style="background-color: #0D0D34">
 
-<h1>FAQ</h1>
+<h2>FAQ</h2>
 <div></div>
 
 <div>
 <div class="faint-label">For individuals</div>
 <strong>What do I get by signing up?</strong>
-<p>Fill in our <a href="https://forms.gle/TW93cS48tvi1wnvm9">talent intake form</a>, describing your skills and desires, and we will email you if we see a good fit. You can also opt-in to cofounder mixers and events that we host. 
+<p>You get matched with opportunities to become a CTO at an exciting new startup, vetted by the Work on Climate team.  You can also opt in to invitations to founder events we host.  To be considered, please fill out <a href="https://forms.gle/TW93cS48tvi1wnvm9">our form</a> here.
 </p>
-
-<strong>Is this free?</strong>
-<p>
-Yes. We want to help you find a meaningful job in climate and believe that this is one of the best ways to scale our impact. 
-</p>
-
 
 <strong>What can I do while I wait to be matched?</strong>
 <p>Get started taking action today by finding people and resources with others in the <a href="https://workonclimate.org">Work on Climate</a> community.
@@ -359,7 +374,8 @@ Yes. We want to help you find a meaningful job in climate and believe that this 
 <div class="faint-label">For organizations</div>
 
 <strong>What do I get by signing up?</strong>
-<p>Fill in our <a href="https://forms.gle/ZJZigKPPoq7ntkzu9">organization intake form</a> describing your project and team. If we see a skills match, we will send you candidate profiles. 
+
+<p>Signing up gets you access to an incredible vetted talent pool of highly technical CTO candidates. To be considered, please fill out <a href="https://forms.gle/ZJZigKPPoq7ntkzu9">our form</a> here.
 </p>
 
 <strong>Is this free?</strong>
@@ -373,9 +389,9 @@ Yes. You are doing critical work for our world, and we want to empower you with 
 
 <!--<section class="text-section about-us-section" style="background-color: #1a2028;">
 
-<h1>
+<h2>
 Part time consultancy
-</h1>
+</h2>
 
 <div>
 <p>
@@ -390,13 +406,13 @@ Not ready to be a CTO, but looking to try part time work in climate and seeing i
 
 <section class="text-section about-us-section" style="background-color: #010A1B;">
 
-<h1>
+<h2>
 About Us
-</h1>
+</h2>
 
 
 <p>
-We are two ex-Google AI software engineers with 8 and 5 years  at the company. We left in July 2020 to start meaningful ventures to address climate change. Come join us at <a href="https://workonclimate.org">Work on Climate</a>. <br><br>—<a href="https://www.linkedin.com/in/eugenekirpichov/">Eugene Kirpichov</a> and <a href="https://cassandraxia.com">Cassandra Xia</a>
+We are two ex-Google AI software engineers with 5 and 8 years at the company. We left in July 2020 to start meaningful ventures to address climate change. Come join us at <a href="https://workonclimate.org">Work on Climate</a>. <br><br>—<a href="https://cassandraxia.com">Cassandra Xia</a> and <a href="https://www.linkedin.com/in/eugenekirpichov/">Eugene Kirpichov</a>
 </p>
 </section>
 
